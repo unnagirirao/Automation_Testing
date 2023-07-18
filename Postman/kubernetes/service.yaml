@@ -1,0 +1,18 @@
+apiVersion: v1
+kind: Service
+metadata:
+  namespace: postman
+  labels:
+    app: postman
+  name: postman
+spec:
+  ports:
+  
+    - protocol: TCP
+      port: 5678
+      targetPort: 5678
+   
+   
+  selector:
+    app: postman
+  type: ClusterIP
